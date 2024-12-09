@@ -1,0 +1,9 @@
+{% extends "layout.html" %} {% block "content"%}
+<h1>Product List</h1>
+<button><a href="{% url "products:new" %}">新增商品</a></button>
+<ul>
+    {% for product in products %}
+    <li><a href="{% url "products:show" product.id %}">{{product.title}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

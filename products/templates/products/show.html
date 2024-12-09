@@ -1,0 +1,7 @@
+{% extends "layout.html" %} {% block "content"%}
+<h1>{{ product.title}}</h1>
+<h1>{{ product.price}}</h1>
+<h1>{{ product.description}}</h1>
+<button><a href="{% url "products:edit" product.id %}">編輯</a></button>
+<button><a href="{% url "products:delete" product.id %}">刪除</a></button>
+{% endblock %}
